@@ -1,1 +1,22 @@
+server:
+  port: 8282
 
+spring:
+  security:
+    user:
+      name: root
+      password: admin
+
+security:
+  oauth2:
+    client:
+      client-id: javator
+      client-secret: javator
+      access-token-validity-seconds: 600
+      authorized-grant-types:
+        - refresh_token
+        - authorization_code
+        - password
+      scope:
+        - READ
+        - WRITE
